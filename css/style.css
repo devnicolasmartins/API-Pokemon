@@ -1,5 +1,5 @@
 body{
-    background-color: aquamarine;
+    background-color: #FFF;
 }
 
 .title{
@@ -12,4 +12,23 @@ body{
     align-items: center;
     justify-content: center;
     margin: 0px 0px 0px 40%;     
+}
+
+.info-pokemon{
+    width: 15rem;
+    height: 16rem;
+    margin: auto;
+    border: 3px groove;
+    border-radius: 1rem;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    background-color: #cad3db;
+}
+.name-of-pokemon{
+    position: relative;
+    top: 190px;
+}
+
+.pokeImg{
+    width: 7rem;
 }
