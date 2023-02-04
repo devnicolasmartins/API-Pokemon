@@ -1,7 +1,7 @@
 async function getPokemonInfo(){
   try{
     var selection = document.getElementById("pokedex");
-    var pokeinfo = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=1007&offset=0");
+    var pokeinfo = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=1008&offset=0");
     var pokemon  = pokeinfo.data.results;
     pokemon.forEach(pokemon =>{
       createDiv(pokemon);
