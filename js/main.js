@@ -14,7 +14,7 @@ async function getPokemonInfo(){
 }
 function createDiv(pokemon){
   div = document.createElement("div");
-  div.setAttribute("class", "info-pokemon text-center g-col-6 g-col-md-4")
+  div.setAttribute("class", "info-pokemon text-center col-3")
   p = document.createElement("p");
   p.setAttribute("class", "name-of-pokemon");
   var pokemonName= pokemon.name.toLowerCase().split(" ").map(name => name.charAt(0).toUpperCase() + name.slice(1)).join(" ");
