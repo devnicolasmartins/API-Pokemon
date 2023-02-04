@@ -1,7 +1,7 @@
 async function getPokemonInfo(){
   try{
     var selection = document.getElementById("pokedex");
-    var pokeinfo = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0");
+    var pokeinfo = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=1007&offset=0");
     var pokemon  = pokeinfo.data.results;
     pokemon.forEach(pokemon =>{
       createDiv(pokemon);
@@ -24,7 +24,6 @@ function createDiv(pokemon){
 
   return div;
 }
-
 function createImg(pokemon){
   var img = document.createElement("img");
   var pokemonId = pokemon.url.split("/")[6];
@@ -35,8 +34,9 @@ function createImg(pokemon){
     pokemonId = "0" + pokemonId;
   }
   img.src = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${pokemonId}.png`;
-  //  img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemonId}.svg`;
+  // img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemonId}.svg`;
   img.setAttribute("class", "pokeImg");
   return img;
 }
+
 getPokemonInfo();
