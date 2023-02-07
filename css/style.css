@@ -49,19 +49,20 @@ body{
     bottom: 2px;
 }
 .name-of-pokemon{
+    display: flex;
     position: relative;
-    top: 190px;
-    position: relative;
-    top: 190px;
+    top: 13.125rem;
+    left: 1.25rem;
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     font-size: 1.1rem;
     line-height: 150%;
     color: #2F3133;
+
 }
 
 .pokeImg{
-    width: 8rem;
+    width: 10rem;
 }
 *, *:before, *:after {
     -webkit-box-sizing: border-box;
