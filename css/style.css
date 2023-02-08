@@ -126,3 +126,22 @@ body{
       50% { transform: rotate(45deg); }
       100% { transform: rotate(-45deg); }
   }
+
+  #nextBtn{
+    margin: 20px 0 20px 830px;
+    padding: 15px;
+    border-radius: 30px;
+    background-color: #EBEEF7;
+    color: #3F5DB3;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 1.0rem;
+    line-height: 150%;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+
+  #nextBtn:hover{
+    background-color:#3F5DB3;
+    color: #FFF;
+  }

@@ -1,7 +1,19 @@
-async function getPokemonInfo(){
+var pagination = 0;
+document.getElementById("nextBtn").addEventListener("click", function(){
+  if (pagination >= 1008){
+    return;
+  }
+  pagination += 12;
+  getPokemonInfo(pagination);
+})
+
+async function getPokemonInfo(offset){
+  if (offset > 1008){
+    return;
+  }
   try{
     var selection = document.getElementById("pokedex");
-    var pokeinfo = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=1008&offset=0");
+    var pokeinfo = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=12&offset=${offset}`);
     var pokemon  = pokeinfo.data.results;
     pokemon.forEach(async pokemon =>{
       createDiv(pokemon);
