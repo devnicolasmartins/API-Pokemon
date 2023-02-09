@@ -53,7 +53,7 @@ function createImg(pokemon){
   else if (pokemonId.length === 2){
     pokemonId = "0" + pokemonId;
   }
-  img.src = `https://cors-anywhere.herokuapp.com/https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${pokemonId}.png`; 
+  img.src = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${pokemonId}.png`; 
   //img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemonId}.svg`;
   img.setAttribute("class", "pokeImg");
   } catch(error){
