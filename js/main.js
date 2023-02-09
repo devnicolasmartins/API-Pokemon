@@ -31,9 +31,9 @@ function createDiv(pokemon){
 
   var pokemonName= pokemon.name.split(" ").map(name => name.charAt(0).toUpperCase() + name.slice(1)).join(" ");
   infoDiv.textContent=pokemonName;
-  principalDiv.appendChild(createImg(pokemon));
   createType(pokemon).then(types=> {
     principalDiv.appendChild(infoDiv);
+    principalDiv.appendChild(createImg(pokemon));
     principalDiv.appendChild(createId(pokemon));
     types.forEach(typeDiv=> {
       principalDiv.appendChild(typeDiv);
