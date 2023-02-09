@@ -13,7 +13,7 @@ async function getPokemonInfo(offset){
   }
   try{
     var selection = document.getElementById("pokedex");
-    var pokeinfo = await axios.get(`/api/pokemon?limit=12&offset=${offset}`);
+    var pokeinfo = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=12&offset=${offset}`);
     var pokemon  = pokeinfo.data.results;
     pokemon.forEach(async pokemon =>{
       selection.appendChild(createDiv(pokemon));
@@ -59,7 +59,6 @@ function createImg(pokemon){
   } catch(error){
     console.error(`Erro ao buscar imagens do Pokémon: ${error}`);
   }
-  
   return img;
 }
 
@@ -67,7 +66,7 @@ function createType(pokemon){
   var id = pokemon.url.split("/")[6];
   return new Promise((resolve, reject)=>{
     try{
-    axios.get(`/api/pokemon/${id}`)
+    axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
       .then(function(pokeType){
         var pokemonTypes = pokeType.data.types;
         var typesArray = [];
