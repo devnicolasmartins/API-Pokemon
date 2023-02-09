@@ -15,15 +15,25 @@ body{
 }
 .custom-header{
     background: linear-gradient(0deg, rgba(239,243,246,1) 49%, rgba(255,0,0,1) 47%);
-    height: 15rem;
+    height: 20rem;
 }
 .img-adjust{
-    margin: 0 0 0 25px;
+    margin: auto;
+    width: 385px;
 }
 .custom-row{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
+}
+@media (max-width: 414px ) {
+    .custom-row{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .img-adjust{
+        margin: auto 10.625rem auto auto;
+    }
+
 }
 .info-pokemon{
     position: relative;
@@ -90,69 +100,9 @@ body{
 
 .pokeImg{
     width: 10rem;
+    position: relative;
+    top: 1.875rem;
 }
-*, *:before, *:after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  
-  .pokebola {
-      position: relative;
-      width: 95px;
-      height: 95px;
-      background-color: #FFF;
-      border: 5px solid #000;
-      border-radius: 50%;
-      box-shadow: inset -10px 10px 0 10px rgb(0 0 0 / 10%);
-      overflow: hidden;
-      animation: gira 4s infinite;
-      margin: 20px auto;
-  }
-  .pokebola:before, .pokebola:after {
-      content: "";
-      position: absolute;
-  }
-  .pokebola:before {
-      background-color: #EF4036;
-      width: 100%;
-      height: 50%;
-  }
-  .pokebola:after {
-      top: calc(50% - 10px);
-      width: 100%;
-      height: 15px;
-      background-color: #000;
-  }
-  .pokebola-botao {
-      width: 50px;
-      height: 50px;
-      background-color: #FFF;
-      border: 10px solid #000;
-      border-radius: 50%;
-      position: absolute;
-      top: calc(50% - 25px);
-      left: calc(50% - 25px);
-      z-index: 10;
-  }
-  .pokebola-botao:before {
-      content: "";
-      position: absolute;
-      top: calc(50% - 10px);
-      left: calc(50% - 10px);
-      width: 20px;
-      height: 20px;
-      background-color: #FFF;
-      border: 3px solid #000;
-      border-radius: 50%;
-      z-index: 10;
-  }  
-  
-  @keyframes gira {
-      0% { transform: rotate(-45deg); }
-      50% { transform: rotate(45deg); }
-      100% { transform: rotate(-45deg); }
-  }
 
   #nextBtn{
     display: flex;
