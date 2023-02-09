@@ -16,7 +16,6 @@ async function getPokemonInfo(offset){
     var pokeinfo = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=12&offset=${offset}`);
     var pokemon  = pokeinfo.data.results;
     pokemon.forEach(async pokemon =>{
-      createDiv(pokemon);
       selection.appendChild(createDiv(pokemon));
     });
   } catch(error){
@@ -24,17 +23,26 @@ async function getPokemonInfo(offset){
   }
 }
 function createDiv(pokemon){
-  principalDiv = document.createElement("div");
+  var principalDiv = document.createElement("div");
   principalDiv.setAttribute("class", "info-pokemon text-center col-3")
-  infoDiv = document.createElement("div");
-  infoDiv.setAttribute("class", "name-of-pokemon");
-  var pokemonName= pokemon.name.toLowerCase().split(" ").map(name => name.charAt(0).toUpperCase() + name.slice(1)).join(" ");
-  infoDiv.textContent=pokemonName;
-  principalDiv.appendChild(infoDiv);
-  principalDiv.appendChild(createImg(pokemon));
 
+  var infoDiv = document.createElement("div");
+  infoDiv.setAttribute("class", "name-of-pokemon");
+
+  var pokemonName= pokemon.name.split(" ").map(name => name.charAt(0).toUpperCase() + name.slice(1)).join(" ");
+  infoDiv.textContent=pokemonName;
+
+  createType(pokemon).then(types=> {
+    principalDiv.appendChild(infoDiv);
+    principalDiv.appendChild(createImg(pokemon));
+    principalDiv.appendChild(createId(pokemon));
+    types.forEach(typeDiv=> {
+      principalDiv.appendChild(typeDiv);
+    });
+  });
   return principalDiv;
 }
+
 function createImg(pokemon){
   try{
   var img = document.createElement("img");
@@ -53,22 +61,47 @@ function createImg(pokemon){
   }
   return img;
 }
+
 function createType(pokemon){
-  var types = document.createElement("div");
   var id = pokemon.url.split("/")[6];
-  try{
-  axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
-    .then(function(pokeType){
-      var pokemonTypes = pokeType.data.types;
-      var typesArray = [];
-      pokemonTypes.forEach( pokemonTypes =>{
-        typesArray.push(pokemonTypes.type.name)
-      })
-      types.textContent = typesArray.join(", ");
-      resolve(types);
-    });
-  }catch(error){
-    console.log(`Erro ao adicionar os tipos dos pokemons: ${error}`)
+  return new Promise((resolve, reject)=>{
+    try{
+    axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
+      .then(function(pokeType){
+        var pokemonTypes = pokeType.data.types;
+        var typesArray = [];
+        pokemonTypes.forEach( pokemonTypes =>{
+            var pType = document.createElement("p");
+            pType.textContent = pokemonTypes.type.name.split(" ").map(name => name[0].toUpperCase() + name.slice(1)).join(" ");
+            pType.classList.add(`type-${pokemonTypes.type.name}`);
+            pType.classList.add("types-of-pokemon");
+            typesArray.push(pType);
+        });
+        resolve(typesArray);
+      });
+    }catch(error){
+        console.log(`Erro ao adicionar os tipos dos pokemons: ${error}`)
+      reject(error);
   }
+});
+}
+
+function createId(pokemon){
+  var pokemonId = pokemon.url.split("/")[6];
+  if (pokemonId.length === 1) {
+    pokemonId = "#000" + pokemonId;
+  }
+  else if (pokemonId.length === 2){
+    pokemonId = "#00" + pokemonId;
+  }
+  else if (pokemonId.length === 3){
+    pokemonId = "#0" + pokemonId;
+  }
+  
+  var id = document.createElement("p");
+  id.setAttribute("class", "pokemon-id")
+  id.textContent = pokemonId;
+  
+  return id;
 }
 getPokemonInfo();

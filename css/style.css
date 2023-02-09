@@ -50,8 +50,8 @@ body{
 }
 .name-of-pokemon{
     display: flex;
-    position: relative;
-    top: 13.125rem;
+    position: absolute;
+    top: 13.425rem;
     left: 1.25rem;
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
@@ -60,6 +60,33 @@ body{
     color: #2F3133;
 
 }
+
+.pokemon-id{
+    display: grid;
+    position: relative;
+    top: 2.225rem;
+    left: 1.25rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    line-height: 150%;
+    color: #9fa4a9e0;
+    align-content: stretch;
+    justify-content: start;
+  }
+
+  .types-of-pokemon{
+    float: right;
+    margin: 1.063rem 0.625rem 0 0;
+    position: relative;
+    top: auto;
+    left: auto;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    line-height: 150%;
+    padding: 5px;
+  }
 
 .pokeImg{
     width: 10rem;
@@ -128,7 +155,8 @@ body{
   }
 
   #nextBtn{
-    margin: 20px 0 20px 830px;
+    display: flex;
+    margin: 20px auto 20px auto;
     padding: 15px;
     border-radius: 30px;
     background-color: #EBEEF7;
@@ -145,3 +173,5 @@ body{
     background-color:#3F5DB3;
     color: #FFF;
   }
+  
+

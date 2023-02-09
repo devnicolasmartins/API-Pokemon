@@ -1,0 +1,90 @@
+.type-grass{
+    background-color: rgba(114, 184, 97, 0.1);
+    color: #73B861;
+    border-radius: 15px;
+}
+.type-poison{
+    background-color: rgba(172, 106, 202, 0.1);
+    color: #AC6ACA;
+    border-radius: 15px;
+}
+.type-fire{
+    background-color: rgba(233, 99, 3, 0.1);
+    color: #E96303;
+    border-radius: 15px;
+}
+.type-flying{
+    background-color: rgba(117, 140, 189, 0.1);
+    color: #758CBD;
+    border-radius: 15px;
+}
+.type-water{
+    background-color: rgba(79, 120, 190, 0.1);
+    color: #4F77BE;
+    border-radius: 15px;
+}
+.type-normal{
+    background-color: rgba(144, 144, 144, 0.1);
+    color: #909090;
+    border-radius: 15px;
+}
+.type-bug{
+    background-color: rgba(156, 186, 72, 0.1);
+    color: #9BBA48;
+    border-radius: 15px;
+}
+.type-eletric{
+    background-color: rgba(245, 209, 5, 0.1);
+    color: #D4BC34;
+    border-radius: 15px;
+}
+.type-ground{
+    background-color: rgba(206, 128, 86, 0.1);
+    color: #CE8056;
+    border-radius: 15px;
+}
+.type-fairy{
+    background-color: rgba(226, 150, 225, 0.1);
+    color: #E296E1;
+    border-radius: 15px;
+}
+.type-fighting{
+    background-color: rgba(196, 79, 99, 0.24);
+    color: #C44D61;
+    border-radius: 15px;
+}
+.type-psychic{
+    background-color: rgba(235, 139, 132, 0.1);
+    color: #EB8B85;
+    border-radius: 15px;
+}
+.type-rock{
+    background-color: rgba(132, 190, 179, 0.1);
+    color: #84BEB3;
+    border-radius: 15px;
+}
+.type-steel{
+    background-color: rgba(101, 148, 161, 0.1);
+    color: #6594A1;
+    border-radius: 15px;
+}
+.type-ghost{
+    background-color: rgba(97, 110, 183, 0.1);
+    color: #616EB7;
+    border-radius: 15px;
+}
+.type-ice{
+    background-color: rgba(113, 186, 171, 0.1);
+    color: #71BAAC;
+    border-radius: 15px;
+}
+.type-dragon{
+    background-color: rgba(44, 106, 193, 0.1);
+    color: #2C6AC1;
+    border-radius: 15px;
+}
+.type-dark{
+    background-color: rgba(89, 87, 97, 0.1);
+    color: #595761;
+    border-radius: 15px;
+}
