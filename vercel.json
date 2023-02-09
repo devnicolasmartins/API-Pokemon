@@ -1,8 +1,0 @@
-{
-    "routes": [
-      {
-        "src": "/img/pokedex/**",
-        "dest": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/$1"
-      }
-    ]
-  }

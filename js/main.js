@@ -31,9 +31,8 @@ function createDiv(pokemon){
 
   var pokemonName= pokemon.name.split(" ").map(name => name.charAt(0).toUpperCase() + name.slice(1)).join(" ");
   infoDiv.textContent=pokemonName;
-
+  principalDiv.appendChild(createImg(pokemon));
   createType(pokemon).then(types=> {
-    principalDiv.appendChild(createImg(pokemon));
     principalDiv.appendChild(infoDiv);
     principalDiv.appendChild(createId(pokemon));
     types.forEach(typeDiv=> {
@@ -53,7 +52,7 @@ function createImg(pokemon){
   else if (pokemonId.length === 2){
     pokemonId = "0" + pokemonId;
   }
-  img.src = `/img/pokedex/${pokemonId}.png`; 
+  img.src = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${pokemonId}.png`; 
   //img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemonId}.svg`;
   img.setAttribute("class", "pokeImg");
   } catch(error){
