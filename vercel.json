@@ -9,7 +9,6 @@
         {
           "src": "/api/(.*)",
           "dest": "https://pokeapi.co/api/v2/$1"
-        },
-        { "src": "/(.*)", "dest": "/index.html" }
+        }
       ]
 }
