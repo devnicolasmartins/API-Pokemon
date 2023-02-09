@@ -26,7 +26,7 @@ body{
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
 }
-@media (min-width: 375px ) {
+@media (max-width: 900px )  {
     .custom-row{
         grid-template-columns: repeat(1, 1fr);
     }
@@ -35,6 +35,7 @@ body{
     }
 
 }
+
 .info-pokemon{
     position: relative;
     width: 19rem;
