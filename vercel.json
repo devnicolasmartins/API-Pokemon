@@ -1,0 +1,13 @@
+{
+    "version": 2,
+    "builds": [
+      { "src": "*.js", "use": "@vercel/node" },
+      { "src": "*.css", "use": "@vercel/node-sass" }
+    ],
+    "routes": [
+        {
+          "src": "/api/(.*)",
+          "dest": "https://pokeapi.co/api/v2/$1"
+        }
+      ]
+  }
