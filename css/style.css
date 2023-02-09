@@ -26,7 +26,7 @@ body{
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
 }
-@media (max-width: 390px ) {
+@media (min-width: 375px ) {
     .custom-row{
         grid-template-columns: repeat(1, 1fr);
     }
@@ -125,4 +125,3 @@ body{
     color: #FFF;
   }
   
-
