@@ -6,11 +6,7 @@ document.getElementById("nextBtn").addEventListener("click", function(){
   pagination += 12;
   getPokemonInfo(pagination);
 })
-
 async function getPokemonInfo(offset){
-  if (offset > 1008){
-    return;
-  }
   try{
     var selection = document.getElementById("pokedex");
     var pokeinfo = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=12&offset=${offset}`);
@@ -96,6 +92,9 @@ function createId(pokemon){
   else if (pokemonId.length === 3){
     pokemonId = "#0" + pokemonId;
   }
+  else if (pokemonId.length === 4){
+    pokemonId = "#" + pokemonId;
+  }
   
   var id = document.createElement("p");
   id.setAttribute("class", "pokemon-id")
@@ -103,4 +102,36 @@ function createId(pokemon){
   
   return id;
 }
+
+var inputPokemon = document.getElementById("floatingInput");
+inputPokemon.addEventListener("input", searchPokemon);
+var allPokemon = [];
+var limit;
+async function getAllPokemon(limit) {
+  try {
+    var res = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=${limit}`);
+    allPokemon = res.data.results;
+  } catch (error) {
+    console.error(`Erro ao buscar informações sobre os pokemons: ${error}`);
+  }
+}
+
+async function searchPokemon(){
+  var inputValue = inputPokemon.value;
+  if (inputValue.length === 0) {
+    limit = 12;
+  } else {
+    limit = 1008;
+  }
+  await getAllPokemon(limit);
+  var pokeFilter = allPokemon.filter(pokemon =>{
+    return pokemon.name.toLowerCase().includes(inputValue.toLowerCase());
+  })
+  var selection = document.getElementById("pokedex");
+  selection.innerHTML = "";
+  pokeFilter.forEach(async pokemon=>{
+    selection.appendChild(await createDiv(pokemon));
+  });
+}
+getAllPokemon(limit);
 getPokemonInfo();

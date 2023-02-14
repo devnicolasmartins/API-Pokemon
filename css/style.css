@@ -8,18 +8,23 @@ body{
 }
 
 .align-header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0px 0px 0px 40%;     
+    margin: auto;
+    width: 26.063rem;
+    position: absolute;
+    bottom: 38rem;   
 }
 .custom-header{
-    background: linear-gradient(0deg, rgba(239,243,246,1) 49%, rgba(255,0,0,1) 47%);
-    height: 20rem;
+    background-image: url("../img/Sem\ título_auto_x2.jpg");
+    height: 61rem;
+    position: relative;
+    background-position: left;
 }
 .img-adjust{
     margin: auto;
-    width: 385px;
+    width: 26.063rem;
+    position: relative;
+    bottom: 8rem;
+
 }
 .custom-row{
     display: grid;
@@ -126,3 +131,38 @@ body{
     color: #FFF;
   }
   
+.apresentation{
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+.get-pokemon{
+    width: 30%;
+    margin: 1rem auto;
+}
+.get-pokemon input{
+    border-radius: 3rem;
+    text-indent: 1rem;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.get-pokemon input:focus{
+    border-color: none;
+    box-shadow: none;
+
+}
+.get-pokemon label{
+    padding-left: 2rem;
+    font-size: 1.1rem;
+    color: #9a9a9b;
+}
+.form-control:focus {
+    border-color: none; 
+} 
+
+.invisivel{
+    display: none;
+}
