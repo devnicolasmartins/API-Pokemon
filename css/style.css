@@ -212,11 +212,16 @@ html {
     }
     .link-adjust{
         right: auto;
-        top: auto;
+        top: -9rem;
     }
     .ancor-adjust {
         font-size: 1.6rem;
         width: auto;
         border: none;
+    }
+    .custom-header{
+        background-image: url("../img/7488c03128bce1cfb3e4716b68ebc328.jpg");
+        height: 57rem;
+        background-position: center;
     }
 }
