@@ -231,12 +231,24 @@ html {
         border: none;
         border-radius: 0;
     }
-    .custom-header{
-        background-image: url("../img/mobile.jpg");
+    .custom-header {
+        position: relative;
         height: 57rem;
+        background-image: url("../img/mobile.jpg");
         background-position: center;
         background-repeat: no-repeat;
-    }
-    
+      }
+      
+      .custom-header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: inherit;
+        filter: blur(3px);
+      }
+      
 }
 
