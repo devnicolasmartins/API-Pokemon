@@ -218,10 +218,12 @@ html {
         font-size: 1.6rem;
         width: auto;
         border: none;
+        border-radius: 0;
     }
     .custom-header{
-        background-image: url("../img/7488c03128bce1cfb3e4716b68ebc328.jpg");
+        background-image: url("../img/mobile.png");
         height: 57rem;
         background-position: center;
+        background-repeat: no-repeat;
     }
 }
