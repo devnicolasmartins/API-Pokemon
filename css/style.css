@@ -1,6 +1,9 @@
 body{
     background-color: #FEFEFE;
 }
+html {
+    scroll-behavior: smooth;
+  }
 
 .title{
     font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -9,7 +12,6 @@ body{
 
 .align-header{
     margin: auto;
-    width: 26.063rem;
     position: absolute;
     bottom: 38rem;   
 }
@@ -21,25 +23,42 @@ body{
 }
 .img-adjust{
     margin: auto;
-    width: 26.063rem;
+    width: 50.063rem;
     position: relative;
-    bottom: 8rem;
-
+    right: 28rem;
+    top: 4rem;
 }
+.link-adjust{
+    margin: auto;
+    position: relative;
+    text-decoration: none;
+    right: 28rem;
+    top: 5rem;
+}
+.ancor-adjust{
+    display: flex;
+    padding: 1.3rem;
+    border-radius: 40px;
+    border: 1px solid #acb8da;
+    background-color: rgb(219, 229, 245, 0.5);
+    color: #3F5DB3;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 150%;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.ancor-adjust:hover{
+    background-color: rgb(219, 229, 245, 1);
+  }
+  
 .custom-row{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
 }
-@media (max-width: 900px )  {
-    .custom-row{
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .img-adjust{
-        margin: auto 10.625rem auto auto;
-    }
 
-}
 
 .info-pokemon{
     position: relative;
@@ -147,6 +166,7 @@ body{
     text-indent: 1rem;
     font-weight: 500;
     font-size: 1rem;
+    border: 1px solid #7f93c9;
 }
 
 .get-pokemon input:focus{
@@ -157,7 +177,7 @@ body{
 .get-pokemon label{
     padding-left: 2rem;
     font-size: 1.1rem;
-    color: #9a9a9b;
+    color: #7f93c9;
 }
 .form-control:focus {
     border-color: none; 
@@ -165,4 +185,38 @@ body{
 
 .invisivel{
     display: none;
+}
+@media (max-width: 900px)  {
+    .custom-row{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .img-adjust{
+        margin: auto 10.625rem auto auto;
+    }
+    .get-pokemon{
+        width: 70%;
+    }
+    .align-header{
+        width: 25.063rem;
+        bottom: auto;
+    }
+    .img-adjust {
+        margin: auto;
+        width: 25.063rem;
+        position: relative;
+        right: 0rem;
+        bottom: 10rem;
+    }
+    .custom-header{
+        height: 40rem;
+    }
+    .link-adjust{
+        right: auto;
+        top: auto;
+    }
+    .ancor-adjust {
+        font-size: 1.6rem;
+        width: 25.1rem;
+        border: none;
+    }
 }
