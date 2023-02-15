@@ -27,6 +27,8 @@ html {
     position: relative;
     right: 28rem;
     top: 4rem;
+    animation: float 6s ease-in-out infinite;
+
 }
 .link-adjust{
     margin: auto;
@@ -34,6 +36,15 @@ html {
     text-decoration: none;
     right: 28rem;
     top: 5rem;
+    animation: float 6s ease-in-out infinite;
+}
+@keyframes float{
+	0%,100%{
+		transform:translatey(0)
+	}
+	50%{
+		transform:translatey(-20px)
+	}
 }
 .ancor-adjust{
     display: flex;
@@ -221,10 +232,11 @@ html {
         border-radius: 0;
     }
     .custom-header{
-        background: rgb(239,243,246);
-        background: linear-gradient(0deg, rgba(239,243,246,1) 50%, rgba(255,0,0,1) 50%);
+        background-image: url("../img/mobile.jpg");
         height: 57rem;
         background-position: center;
         background-repeat: no-repeat;
     }
+    
 }
+
