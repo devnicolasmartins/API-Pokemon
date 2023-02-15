@@ -197,12 +197,12 @@ html {
         width: 70%;
     }
     .align-header{
-        width: 25.063rem;
+        width: auto;
         bottom: auto;
     }
     .img-adjust {
         margin: auto;
-        width: 25.063rem;
+        width: auto;
         position: relative;
         right: 0rem;
         bottom: 10rem;
@@ -216,7 +216,7 @@ html {
     }
     .ancor-adjust {
         font-size: 1.6rem;
-        width: 25.1rem;
+        width: auto;
         border: none;
     }
 }
