@@ -88,3 +88,8 @@
     color: #595761;
     border-radius: 15px;
 }
+
+.type-Grass-bg{
+    background: rgb(115,184,97);
+    background: radial-gradient(circle, rgba(115,184,97,1) 0%, rgba(181,232,168,1) 0%, rgba(198,237,188,1) 0%, rgba(216,243,210,1) 18%, rgba(228,247,224,1) 30%, rgba(255,255,255,1) 50%);    
+}

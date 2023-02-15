@@ -197,6 +197,68 @@ html {
 .invisivel{
     display: none;
 }
+
+.modal-header-adjust{
+    border-bottom: none;
+}
+.title-modal-adjust{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 150%;
+    color: #2F3133;
+}
+.type-list{
+    display: grid;
+    justify-items: center;
+}
+
+.types-of-pokemon-modal{
+    float: none;
+    margin: 0.163rem 0.625rem 0 0;
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    line-height: 150%;
+    padding: 8px;
+    text-align: center;
+    top: auto;
+    width: 40%;
+}
+.text-container{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.my-close-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.id-modal{
+    display: grid;
+    position: relative;
+    top: 0.4rem;
+    left: 1rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 150%;
+    color: #9fa4a9e0;
+}
+.modal-img{
+    top: 10rem;
+    left: auto;
+    width: 15rem;
+}
+.img-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 10rem;
+  }
 @media (max-width: 900px)  {
     .custom-row{
         grid-template-columns: repeat(1, 1fr);
@@ -251,4 +313,5 @@ html {
       }
       
 }
+
 
