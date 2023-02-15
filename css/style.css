@@ -221,7 +221,8 @@ html {
         border-radius: 0;
     }
     .custom-header{
-        background-image: url("../img/mobile.png");
+        background: rgb(239,243,246);
+        background: linear-gradient(0deg, rgba(239,243,246,1) 50%, rgba(255,0,0,1) 50%);
         height: 57rem;
         background-position: center;
         background-repeat: no-repeat;
