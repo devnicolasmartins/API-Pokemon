@@ -364,6 +364,20 @@ html {
         background: inherit;
         filter: blur(3px);
       }
+      .modal-ul {
+        display: flex;
+        justify-items: center;
+        align-items: flex-start;
+    }
+    .char-list {
+        position: absolute;
+        right: auto;
+        top: 3rem;
+    }
+    .modal-li {
+        text-align: center;
+        padding: 0 1rem 2rem 1rem;
+    }
       
 }
 
