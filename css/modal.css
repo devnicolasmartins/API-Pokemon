@@ -134,7 +134,7 @@
     right: 0.9rem;
 }
 
-@media (max-width: 900px)  {
+@media (max-width: 999px)  {
     .modal-body{
         display: grid;
         justify-content: space-around;

@@ -1,9 +1,12 @@
-body{
-    background-color: #FEFEFE;
-}
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden !important;
+
   }
+body{
+    background-color: #FEFEFE;
+    overflow-x: hidden !important;
+}
 
 .title{
     font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -20,6 +23,7 @@ html {
     height: 61rem;
     position: relative;
     background-position: left;
+    background-repeat: no-repeat;
 }
 .img-adjust{
     margin: auto;
@@ -66,9 +70,10 @@ html {
   
 .custom-row{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
     justify-items: center;
+    align-items: center;
+    justify-content: space-between;
 }
 
 
@@ -204,15 +209,46 @@ html {
     padding-bottom: 1rem;
     font-weight: 500;
 }
-@media (max-width: 900px)  {
-    .custom-row{
+@media (max-width: 770px)  {
+    .custom-row {
         grid-template-columns: repeat(1, 1fr);
     }
+    .link-adjust{
+        right: auto;
+        top: auto;
+    }
+}
+@media (min-width: 770px)  {
+    .custom-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .img-adjust{
+        right: auto;
+        top: 3rem;
+    }
+    .link-adjust{
+        right: auto;
+        top: auto;
+    }
+}
+@media (min-width: 990px)  {
+    .custom-row {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .link-adjust{
+        right: auto;
+        top: 5rem;
+    }
+    .img-adjust{
+        top: 5rem;
+    }
+}
+@media (max-width: 1199px)  {
     .img-adjust{
         margin: auto 10.625rem auto auto;
     }
     .get-pokemon{
-        width: 70%;
+        width: 40%;
     }
     .align-header{
         width: auto;
@@ -227,11 +263,9 @@ html {
     }
     .custom-header{
         height: 40rem;
+        background-size: cover;
     }
-    .link-adjust{
-        right: auto;
-        top: -9rem;
-    }
+    
     .ancor-adjust {
         font-size: 1.6rem;
         width: auto;
@@ -257,6 +291,30 @@ html {
         filter: blur(3px);
       }
 }
-
+@media(min-width: 1400px){
+    .custom-row{
+        grid-template-columns: repeat(4, 1fr);
+        margin: 0;
+    }
+    .link-adjust{
+        right: 15rem;
+    }
+    .img-adjust{
+        right: 15rem;
+    }
+}
+@media(min-width: 1400px){
+    .custom-row{
+        margin: auto;
+    }
+}
+@media(min-width: 1800px){
+    .link-adjust{
+        right: 28rem;
+    }
+    .img-adjust{
+        right: 28rem;
+    }
+}
 
 
