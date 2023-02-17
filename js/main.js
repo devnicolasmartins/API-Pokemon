@@ -1,6 +1,7 @@
 var pagination = 0;
 var pokemon;
-document.getElementById("nextBtn").addEventListener("click", function(){
+var nextBtn = document.getElementById("nextBtn");
+nextBtn.addEventListener("click", function(){
   if (pagination >= 1008){
     return;
   }
@@ -132,9 +133,19 @@ async function searchPokemon(){
   })
   var selection = document.getElementById("pokedex");
   selection.innerHTML = "";
-  pokeFilter.forEach(async pokemon=>{
-    selection.appendChild(await createDiv(pokemon));
-  });
+  if(pokeFilter.length === 0){
+    var notFoundDiv = document.createElement("div");
+    notFoundDiv.textContent = "Nenhum pokémon encontrado."
+    notFoundDiv.classList.add("not-found")
+    selection.appendChild(notFoundDiv)
+    nextBtn.style.display="none"
+  }
+  else{
+    pokeFilter.forEach(async pokemon=>{
+      selection.appendChild(await createDiv(pokemon));
+    });
+    nextBtn.style.display="flex"
+  }
 }
 
 getAllPokemon(limit);

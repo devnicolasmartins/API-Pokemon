@@ -68,6 +68,7 @@ html {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
+    justify-items: center;
 }
 
 
@@ -333,6 +334,12 @@ html {
     min-width: 7rem;
     right: 0.9rem;
 }
+.not-found{
+    position: absolute;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    font-weight: 400;
+}
 @media (max-width: 900px)  {
     .custom-row{
         grid-template-columns: repeat(1, 1fr);
@@ -421,5 +428,6 @@ html {
         font-size: 1rem;
     }
 }
+
 
 
