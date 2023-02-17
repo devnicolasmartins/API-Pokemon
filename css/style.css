@@ -312,6 +312,27 @@ html {
     font-weight: 600;
     text-align: center;
 }
+.weakness{
+    position: absolute;
+    left: 4rem;
+    display: grid;
+    justify-items: center;
+}
+.weak-ul{
+    display: grid;
+    justify-content: start;
+}
+.weak-li{
+    text-align: center;
+    position: relative;
+    margin: 0.8rem 0 0 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 150%;
+    min-width: 7rem;
+    right: 0.9rem;
+}
 @media (max-width: 900px)  {
     .custom-row{
         grid-template-columns: repeat(1, 1fr);
@@ -364,7 +385,12 @@ html {
         background: inherit;
         filter: blur(3px);
       }
-      .modal-ul {
+    
+    .info-container{
+        display: grid;
+        align-items: flex-end
+    }
+    .modal-ul {
         display: flex;
         justify-items: center;
         align-items: flex-start;
@@ -378,7 +404,22 @@ html {
         text-align: center;
         padding: 0 1rem 2rem 1rem;
     }
-      
+    .type-list{
+        display: flex;
+        justify-content: center;
+    }  
+    .weakness{
+        left: 0;
+    }
+    .weak-ul {
+        display: flex;
+        justify-content: center;
+    }
+    .weak-li {
+        min-width: 4rem;
+        right: 0;
+        font-size: 1rem;
+    }
 }
 
 

@@ -16,7 +16,7 @@ function createModall(pokemon){
   var body = document.createElement("div");
   body.setAttribute("class", "modal-body");
 
-  var title = document.createElement("h4");
+  var title = document.createElement("h2");
   title.setAttribute("class", "title-modal title-modal-adjust")
   title.setAttribute("id", `${modalId}-label`)
   title.textContent = pokemon.name.split(" ").map(name => name.charAt(0).toUpperCase() + name.slice(1)).join(" ");
@@ -92,8 +92,6 @@ function createModall(pokemon){
         button.setAttribute("data-bs-toggle", "dropdown");
         button.setAttribute("aria-expanded", "false")
     
-
-    
     var buttonUl = document.createElement("ul");
     buttonUl.setAttribute("class","dropdown-menu btn-ul")
     
@@ -117,16 +115,16 @@ function createModall(pokemon){
         buttonUl.appendChild(buttonLi);
       }
     });
+
     abilityLi.appendChild(buttonUl)
     abilityLi.appendChild(button);
     ul.appendChild(weightLi);
     ul.appendChild(heightLi); 
     ul.appendChild(abilityLi); 
   })
-
   createType(pokemon).then(types =>{ // função oriunda do arquivo main.js
     var typeBg = types[0].textContent;
-    infoContainer.classList.add(`type-${typeBg}-bg`)
+    body.classList.add(`type-${typeBg}-bg`)
     types.forEach(typeDiv=>{
       typeList.appendChild(typeDiv);
       body.appendChild(typeList);
@@ -134,6 +132,27 @@ function createModall(pokemon){
       typeDiv.classList.add("types-of-pokemon-modal")
     });
   });
+
+  var weaknessDiv= document.createElement("div");
+  weaknessDiv.classList.add("weakness");
+  infoContainer.appendChild(weaknessDiv);
+
+  var titleWeaknessDiv= document.createElement("h4");
+  titleWeaknessDiv.textContent= "Weaknesses"
+  weaknessDiv.appendChild(titleWeaknessDiv);
+
+  var weakUl= document.createElement("ul");
+  weakUl.classList.add("weak-ul");
+  weaknessDiv.appendChild(weakUl);
+
+  weaknessArrayFull(pokemon).then(spot=>{
+    spot.forEach(scrollWeakArray=>{
+      var weakLi= document.createElement("li");
+      weakLi.setAttribute("class", `weak-li type-${scrollWeakArray}`)
+      weakLi.textContent= scrollWeakArray.split(" ").map(scrollWeakArray => scrollWeakArray.charAt(0).toUpperCase() + scrollWeakArray.slice(1)).join(" ");;
+      weakUl.appendChild(weakLi);
+    })
+})
 
   infoContainer.appendChild(charList);
   body.appendChild(closeBtn);
@@ -172,3 +191,49 @@ function characteristics(pokemon){
     }
   });
 }  
+
+function weakness(pokemon){
+  var id = pokemon.url.split("/")[6];
+  return axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
+    .then(function(pokeType){
+      var pokemonTypes = pokeType.data.types;
+      var typesArray = [];
+      pokemonTypes.forEach(types =>{
+          var type = types.type.name;
+          typesArray.push(type)
+      });
+      return typesArray[0];
+    })
+    .catch(error => {
+      console.log(`Erro ao adicionar os tipos dos pokemons: ${error}`)
+      throw error;
+    });
+}
+
+function weaknessArrayFull(pokemon){
+  return weakness(pokemon).then(typeName=>{
+    return new Promise((resolve, reject)=>{
+      try{
+        axios.get(`https://pokeapi.co/api/v2/type/${typeName}`)
+        .then(typeId=>{
+          var pokeWeakness = typeId.data.damage_relations.double_damage_from;
+          var weakArray = [];
+          pokeWeakness.forEach(types=>{
+            var array= types.name;
+            weakArray.push(array);
+          });
+          resolve(weakArray);
+        });
+      }
+      catch(error){
+        console.log(`Erro ao adicionar os tipos dos pokemons: ${error}`)
+      reject(error);
+      } 
+  
+      });
+  });
+  
+
+};
+
+
