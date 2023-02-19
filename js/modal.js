@@ -246,13 +246,21 @@ function createModall(pokemon){
   document.body.appendChild(modal2);
 
   infoContainer.appendChild(btnOpenModal);
-  if (window.innerWidth < 1000) {
+  const mediaQuery = window.matchMedia('(max-width: 1000px)');
+
+function handleMediaQueryChange(event) {
+  if (event.matches) {
     infoModalBody.appendChild(statsDiv);
-    btnOpenModal.style.display="block";
+    btnOpenModal.style.display = 'block';
   } else {
     infoContainer.appendChild(statsDiv);
-    btnOpenModal.style.display="none";
+    btnOpenModal.style.display = 'none';
   }
+}
+handleMediaQueryChange(mediaQuery);
+
+// Adicionar ouvinte de evento para monitorar alterações na mediaQuery
+mediaQuery.addEventListener('change', handleMediaQueryChange);
   });
   weaknessArrayFull(pokemon).then(spot=>{
     spot.forEach(scrollWeakArray=>{
