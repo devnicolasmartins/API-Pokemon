@@ -246,7 +246,7 @@ function createModall(pokemon){
   document.body.appendChild(modal2);
 
   infoContainer.appendChild(btnOpenModal);
-  
+
   const mediaQuery = window.matchMedia('(max-width: 1000px)');
 
   function handleMediaQueryChange(event) {
@@ -260,7 +260,6 @@ function createModall(pokemon){
   }
   handleMediaQueryChange(mediaQuery);
 
-  // Adicionar ouvinte de evento para monitorar alterações na mediaQuery
   mediaQuery.addEventListener('change', handleMediaQueryChange);
   });
   weaknessArrayFull(pokemon).then(spot=>{
@@ -352,7 +351,7 @@ function weaknessArrayFull(pokemon){
       });
   });
 };
-//////////////////////////////////////////////////////////////////////////////////////////////
+
 function pokemonStats(pokemon){
   var id = pokemon.url.split("/")[6];
   return axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
