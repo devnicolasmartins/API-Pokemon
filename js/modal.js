@@ -98,7 +98,7 @@ function createModall(pokemon){
     buttonUl.setAttribute("class","dropdown-menu btn-ul")
     
     var strongLi= document.createElement("strong")
-
+    
     char.abilities.forEach((abilityList, index) => {
       // Adiciona o primeiro item da lista de habilidades em uma tag strong
       if (index === 0) {
@@ -193,20 +193,22 @@ function createModall(pokemon){
       barStatsArray[index].style.width=`${stats}%`
     });
 
-    handleMediaChange(mediaQuery);
-    infoContainer.appendChild(statsDiv);
-  });
+  
   var infoModalId = `info-modal-${pokemon.name}`;
   var btnOpenModal = document.createElement("button");
   btnOpenModal.setAttribute("type", "button");
   btnOpenModal.setAttribute("id", infoModalId);
-  btnOpenModal.setAttribute("class", "btn btn-secondary");
+  btnOpenModal.setAttribute("class", "btn btn-secondary btn-stats-modal");
   btnOpenModal.setAttribute("data-bs-toggle", "modal");
   btnOpenModal.setAttribute("data-bs-target", "#modal2");
   btnOpenModal.setAttribute("tabindex", "-1");
   btnOpenModal.setAttribute("aria-labelledby", `${infoModalId}-label`);
   btnOpenModal.setAttribute("aria-hidden", "true");
   btnOpenModal.textContent = "Stats...";
+  createType(pokemon).then(types => {
+    var typeBtnBg = types[0].textContent;
+    btnOpenModal.classList.add(`type-${typeBtnBg.toLowerCase()}`);
+  });
 
   var modalId2 = "modal2";
   var modal2 = document.createElement("div");
@@ -227,24 +229,31 @@ function createModall(pokemon){
 
   var infoModalTitle = document.createElement("h2");
   infoModalTitle.setAttribute("class", "title-modal title-modal-adjust")
-  infoModalTitle.textContent = "Stats";
+  infoModalTitle.textContent = `${pokemon.name.split(" ").map(name => name.charAt(0).toUpperCase() + name.slice(1)).join(" ")} - Stats`;
 
   var infoCloseBtn = document.createElement("button");
   infoCloseBtn.setAttribute("type", "button");
   infoCloseBtn.setAttribute("class", "btn-close my-close-btn");
   infoCloseBtn.setAttribute("data-bs-dismiss", "modal");
   infoCloseBtn.setAttribute("aria-label", "Close");
-
+  
   btnOpenModal.appendChild(infoModalDialog);
   infoModalDialog.appendChild(infoModalContent);
   infoModalContent.appendChild(infoModalBody);
   infoModalBody.appendChild(infoModalTitle);
   infoModalBody.appendChild(infoCloseBtn);
   modal2.appendChild(infoModalDialog);
-
   document.body.appendChild(modal2);
 
   infoContainer.appendChild(btnOpenModal);
+  if (window.innerWidth < 1000) {
+    infoModalBody.appendChild(statsDiv);
+    btnOpenModal.style.display="block";
+  } else {
+    infoContainer.appendChild(statsDiv);
+    btnOpenModal.style.display="none";
+  }
+  });
   weaknessArrayFull(pokemon).then(spot=>{
     spot.forEach(scrollWeakArray=>{
       var weakLi= document.createElement("li");
@@ -271,6 +280,8 @@ function openModal(pokemon){
   var modalElement = new bootstrap.Modal(document.getElementById(modalId));
   modalElement.show();
 }
+
+
 
 function characteristics(pokemon){
   var id = pokemon.url.split("/")[6];
@@ -350,16 +361,4 @@ function pokemonStats(pokemon){
       throw error;
     });
 }
-var mediaQuery = window.matchMedia("(max-width: 1000px)");
 
-function handleMediaChange(event) {
-  if (event.matches) {
-    infoModalBody.appendChild(statsDiv);
-  } 
-  else{
-    infoContainer.appendChild(statsDiv);
-  }
-}
-
-mediaQuery.addListener(handleMediaChange);
-handleMediaChange(mediaQuery);

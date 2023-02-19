@@ -273,7 +273,21 @@
         min-width: 4rem;
         font-size: 1rem;
     }
+    .stats{
+        position: relative;
+      }
+     .item{
+        top: 0;
+      }
 }
+.btn-stats-modal{
+    border: none;
+    position: absolute;
+    top: 26rem;
+    right: 24rem;
+
+}
+
 .invisivel{
     display: none;
 }
