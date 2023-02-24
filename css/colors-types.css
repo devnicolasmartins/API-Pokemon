@@ -93,3 +93,71 @@
     background: rgb(115,184,97);
     background: radial-gradient(circle, rgba(115,184,97,1) 0%, rgba(181,232,168,1) 0%, rgba(198,237,188,1) 0%, rgba(216,243,210,1) 18%, rgba(228,247,224,1) 30%, rgba(255,255,255,1) 50%);    
 }
+.type-Poison-bg{
+    background: rgb(214,157,255);
+    background: radial-gradient(circle, rgba(214,157,255,0.6867121848739496) 0%, rgba(228,177,255,0.7343312324929971) 18%, rgba(242,215,255,0.6839110644257703) 30%, rgba(255,255,255,1) 50%);
+}
+.type-Fire-bg{
+    background: rgb(255,194,157);
+    background: radial-gradient(circle, rgba(255,194,157,0.6867121848739496) 0%, rgba(255,213,177,0.7343312324929971) 18%, rgba(255,232,215,0.6839110644257703) 30%, rgba(255,255,255,1) 50%);
+}
+.type-Flying-bg{
+    background: rgb(157,182,255);
+    background: radial-gradient(circle, rgba(157,182,255,0.6867121848739496) 0%, rgba(177,192,255,0.7343312324929971) 18%, rgba(215,225,255,0.6839110644257703) 30%, rgba(255,255,255,1) 50%);
+}
+.type-Water-bg{
+    background: rgb(157,205,255);
+    background: radial-gradient(circle, rgba(157,205,255,0.6867121848739496) 0%, rgba(177,203,255,0.7343312324929971) 18%, rgba(215,231,255,0.6839110644257703) 30%, rgba(255,255,255,1) 50%);
+}
+.type-Normal-bg{
+    background: rgb(150,150,150);
+    background: radial-gradient(circle, rgba(150,150,150,0.40379901960784315) 0%, rgba(170,170,171,0.47102591036414565) 18%, rgba(204,203,203,0.29175420168067223) 30%, rgba(255,255,255,1) 50%);
+}
+.type-Bug-bg{
+    background: rgb(225,255,157);
+    background: radial-gradient(circle, rgba(225,255,157,0.6867121848739496) 0%, rgba(223,255,177,0.7343312324929971) 18%, rgba(234,255,215,0.6839110644257703) 30%, rgba(255,255,255,1) 50%);
+}
+.type-Electric-bg{
+    background: rgb(255,252,157);
+    background: radial-gradient(circle, rgba(255,252,157,0.6867121848739496) 0%, rgba(252,255,177,0.7343312324929971) 18%, rgba(254,255,215,0.6839110644257703) 30%, rgba(255,255,255,1) 50%);
+}
+.type-Ground-bg{
+    background: rgb(255,209,157);
+    background: radial-gradient(circle, rgba(255,209,157,0.6867121848739496) 0%, rgba(255,212,177,0.7343312324929971) 18%, rgba(255,236,215,0.6839110644257703) 30%, rgba(255,255,255,1) 50%);
+}
+.type-Fairy-bg{
+    background: rgb(251,157,255);
+    background: radial-gradient(circle, rgba(251,157,255,0.6867121848739496) 0%, rgba(255,177,251,0.7343312324929971) 18%, rgba(255,215,252,0.6839110644257703) 30%, rgba(255,255,255,1) 50%);
+}
+.type-Fighting-bg{
+    background: rgb(255,157,157);
+    background: radial-gradient(circle, rgba(255,157,157,0.6867121848739496) 0%, rgba(255,177,177,0.7343312324929971) 18%, rgba(255,215,215,0.6839110644257703) 30%, rgba(255,255,255,1) 50%);
+}
+.type-Psychic-bg{
+    background: rgb(255,183,157);
+    background: radial-gradient(circle, rgba(255,183,157,0.6867121848739496) 0%, rgba(255,202,177,0.7343312324929971) 18%, rgba(255,224,215,0.6839110644257703) 30%, rgba(255,255,255,1) 50%);
+}
+.type-Rock-bg{
+    background: rgb(132,190,179);
+    background: radial-gradient(circle, rgba(132,190,179,0.40379901960784315) 0%, rgba(132,190,179,0.47102591036414565) 18%, rgba(132,190,179,0.29175420168067223) 30%, rgba(255,255,255,1) 50%);
+}
+.type-Steel-bg{
+    background: rgb(132,173,190);
+    background: radial-gradient(circle, rgba(132,173,190,0.40379901960784315) 0%, rgba(132,176,190,0.47102591036414565) 18%, rgba(132,179,190,0.29175420168067223) 30%, rgba(255,255,255,1) 50%);
+}
+.type-Ghost-bg{
+    background: rgb(132,136,190);
+    background: radial-gradient(circle, rgba(132,136,190,0.40379901960784315) 0%, rgba(132,133,190,0.47102591036414565) 18%, rgba(132,135,190,0.29175420168067223) 30%, rgba(255,255,255,1) 50%);
+}
+.type-Ice-bg{
+    background: rgb(132,189,190);
+    background: radial-gradient(circle, rgba(132,189,190,0.40379901960784315) 0%, rgba(132,190,181,0.47102591036414565) 18%, rgba(132,190,184,0.29175420168067223) 30%, rgba(255,255,255,1) 50%);
+}
+.type-Dragon-bg{
+    background: rgb(132,156,190);
+    background: radial-gradient(circle, rgba(132,156,190,0.40379901960784315) 0%, rgba(132,153,190,0.47102591036414565) 18%, rgba(132,158,190,0.29175420168067223) 30%, rgba(255,255,255,1) 50%);
+}
+.type-Dark-bg{
+    background: rgb(12,13,14);
+    background: radial-gradient(circle, rgba(12,13,14,0.40379901960784315) 0%, rgba(68,75,85,0.47102591036414565) 18%, rgba(90,91,93,0.29175420168067223) 30%, rgba(255,255,255,1) 50%);
+}

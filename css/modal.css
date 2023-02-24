@@ -109,6 +109,10 @@
     font-weight: 600;
 }
 
+.btn-modal:hover{
+    background-color: #5298f3e0
+}
+
 .dropdown-toggle::after {
     display: none;
 }
