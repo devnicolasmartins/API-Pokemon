@@ -71,7 +71,7 @@
 
 .char-list {
     position: absolute;
-    right: 4rem;
+    right: 3rem;
 }
 
 .modal-ul {
@@ -129,7 +129,7 @@
 
 .weakness {
     position: absolute;
-    left: 4rem;
+    left: 3rem;
     display: grid;
     justify-items: center;
 }
@@ -228,6 +228,7 @@
     .info-container {
         align-items: flex-end;
         bottom: auto;
+        padding: 14rem;
     }
 
     .modal-ul {
@@ -260,7 +261,7 @@
 
     .weakness {
         left: auto;
-        bottom: 1rem;
+        bottom: 8rem;
         right: none;
     }
 
@@ -274,7 +275,9 @@
         font-size: 1rem;
     }
     .stats{
-        position: relative;
+        position: absolute;
+        width: 60%;
+        bottom: 1rem;
       }
      .item{
         top: 0;
