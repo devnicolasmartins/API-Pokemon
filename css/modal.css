@@ -276,11 +276,16 @@
     }
     .stats{
         position: absolute;
-        width: 60%;
+        width: 50%;
         bottom: 1rem;
       }
      .item{
         top: 0;
+      }
+}
+@media (min-width: 500px){
+    .stats{
+        width: 60%;
       }
 }
 .btn-stats-modal{
