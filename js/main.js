@@ -22,7 +22,7 @@ async function getPokemonInfo(offset){
 }
 function createDiv(pokemon){
   var principalDiv = document.createElement("div");
-  principalDiv.setAttribute("class", "info-pokemon text-center col-3")
+  principalDiv.setAttribute("class", "info-pokemon text-center col-sm-3")
   principalDiv.addEventListener("click", function(){
     openModal(pokemon);
   });
@@ -33,6 +33,7 @@ function createDiv(pokemon){
   var pokemonName= pokemon.name.split(" ").map(name => name.charAt(0).toUpperCase() + name.slice(1)).join(" ");
   infoDiv.textContent=pokemonName;
   createType(pokemon).then(types=> {
+    types.reverse();
     principalDiv.appendChild(infoDiv);
     principalDiv.appendChild(createImg(pokemon));
     principalDiv.appendChild(createId(pokemon));
