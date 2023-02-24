@@ -350,19 +350,15 @@ function createModall(pokemon){
   
   createModal(pokemon).appendChild(createDialog());
 
-  return createModall(pokemon);
+  return createModal(pokemon);
 }
 
 function openModal(pokemon){
-  var modalId = `modal-${pokemon.name}`;
   var selection = document.getElementById("pokedex");
-  var modal = createModall(pokemon);
-  selection.appendChild(modal);
-  var modalElement = new bootstrap.Modal(document.getElementById(modalId));
+  selection.appendChild(createModal(pokemon));
+  var modalElement = new bootstrap.Modal(document.getElementById(createModalId(pokemon)));
   modalElement.show();
 }
-
-
 
 function characteristics(pokemon){
   var id = pokemon.url.split("/")[6];
