@@ -219,6 +219,12 @@
     width: 6.8rem;
     display: block;
 }
+
+@media (max-width: 485px){
+    .stats{
+        width: 50%;
+      }
+}
 @media (max-width: 999px) {
     .modal-body {
         display: grid;
