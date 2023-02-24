@@ -8,7 +8,7 @@ function createModal(pokemon){
   modal.setAttribute("class", "modal fade");
   modal.setAttribute("id", createModalId(pokemon));
   modal.setAttribute("tabindex", "-1");
-  modal.setAttribute("aria-labelledby", `${pokemon.name}-label`);
+  modal.setAttribute("aria-labelledby", `${createModalId(pokemon)}-label`);
   modal.setAttribute("aria-hidden", "true");
 
   return modal;
