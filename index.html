@@ -29,7 +29,7 @@
             <label for="floatingInput">Search name</label>
         </div>
         <section id="pokedex" class="container custom-row">
-
+            <!-- Conteúdo criado e adicionado via JavaScript -->
         </section>
         
         <button id="nextBtn" class="btn">Clique para carregar mais Pokémons</button>
@@ -45,5 +45,12 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/modal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <div id="preload" class="preload"></div>
+    <script>
+        $(window).on('load',function(){
+            $('#preload').fadeOut(1500);
+        });
+    </script>
 </body>
 </html>

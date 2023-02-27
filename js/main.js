@@ -121,7 +121,30 @@ async function getAllPokemon(limit) {
   }
 }
 
-async function searchPokemon(){
+function showLoading() {
+  nextBtn.style.display = "none"
+  var loadingDiv = document.createElement("div");
+  loadingDiv.id = "loading";
+  loadingDiv.style.display = "flex";
+  loadingDiv.innerHTML = `
+    <div class="spinner-border text-primary col-sm-3" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  `;
+  var selection = document.getElementById("pokedex");
+  selection.innerHTML = "";
+  selection.appendChild(loadingDiv);
+}
+
+function hideLoading() {
+  var loading = document.getElementById("loading");
+  if (loading) {
+    loading.remove();
+  }
+}
+
+async function searchPokemon() {
+  showLoading(); // mostra o elemento de carregamento
   var inputValue = inputPokemon.value;
   if (inputValue.length === 0) {
     limit = 12;
@@ -129,24 +152,24 @@ async function searchPokemon(){
     limit = 1008;
   }
   await getAllPokemon(limit);
-  var pokeFilter = allPokemon.filter(pokemon =>{
+  var pokeFilter = allPokemon.filter(pokemon => {
     return pokemon.name.toLowerCase().includes(inputValue.toLowerCase());
   })
   var selection = document.getElementById("pokedex");
   selection.innerHTML = "";
-  if(pokeFilter.length === 0){
+  if (pokeFilter.length === 0) {
     var notFoundDiv = document.createElement("div");
     notFoundDiv.textContent = "Nenhum pokémon encontrado."
     notFoundDiv.classList.add("not-found")
     selection.appendChild(notFoundDiv)
-    nextBtn.style.display="none"
-  }
-  else{
-    pokeFilter.forEach(async pokemon=>{
+    nextBtn.style.display = "none"
+  } else {
+    pokeFilter.forEach(async pokemon => {
       selection.appendChild(await createDiv(pokemon));
     });
-    nextBtn.style.display="flex"
+    nextBtn.style.display = "flex"
   }
+  hideLoading(); // oculta o elemento de carregamento
 }
 
 getAllPokemon(limit);
