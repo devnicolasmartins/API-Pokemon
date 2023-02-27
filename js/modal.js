@@ -1,5 +1,3 @@
-var statsDiv;
-var infoContainer;
 function createModal(pokemon){
   
   var modalId = `modal-${pokemon.name}`;
@@ -40,7 +38,7 @@ function createModal(pokemon){
   closeBtn.setAttribute("data-bs-dismiss", "modal");
   closeBtn.setAttribute("aria-label", "Close");
 
-  infoContainer = document.createElement("div");
+  let infoContainer = document.createElement("div");
   infoContainer.setAttribute("class", "info-container");
   
   var pokemonImg = createImg(pokemon); // função oriunda do arquivo main.js
@@ -90,15 +88,15 @@ function createModal(pokemon){
 
     var button = document.createElement("button");
         button.textContent = "Show more...";
-        button.setAttribute("type", "button")
-        button.setAttribute("class","btn btn-primary dropdown-toggle btn-modal")
+        button.setAttribute("type", "button");
+        button.setAttribute("class","btn btn-primary dropdown-toggle btn-modal");
         button.setAttribute("data-bs-toggle", "dropdown");
-        button.setAttribute("aria-expanded", "false")
+        button.setAttribute("aria-expanded", "false");
     
     var buttonUl = document.createElement("ul");
-    buttonUl.setAttribute("class","dropdown-menu btn-ul")
+    buttonUl.setAttribute("class","dropdown-menu btn-ul");
     
-    var strongLi= document.createElement("strong")
+    var strongLi= document.createElement("strong");
     
     char.abilities.forEach((abilityList, index) => {
       // Adiciona o primeiro item da lista de habilidades em uma tag strong
@@ -150,7 +148,7 @@ function createModal(pokemon){
   var arrayStatsName = ["HP", "Attack", "Defense", "Sp. Attack", "Sp. Defense", "Speed"];
   
   pokemonStats(pokemon).then(stats=>{
-    statsDiv= document.createElement("div");
+    let statsDiv= document.createElement("div");
     statsDiv.classList.add("stats");
 
     var divStats;
