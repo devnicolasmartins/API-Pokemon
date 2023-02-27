@@ -23,7 +23,6 @@ async function getPokemonInfo(offset){
 function createDiv(pokemon){
   var principalDiv = document.createElement("div");
   principalDiv.setAttribute("class", "info-pokemon text-center col-sm-3");
-  principalDiv.setAttribute("data-aos", "zoom-in");
   principalDiv.addEventListener("click", function(){
     openModal(pokemon);
   });
