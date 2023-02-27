@@ -6,6 +6,20 @@ body{
     background-color: #FEFEFE;
 }
 
+body::-webkit-scrollbar {
+    width: 10px;               /* width of the entire scrollbar */
+    background: #F4F4F4;
+  }
+
+body::-webkit-scrollbar-track {
+  background: #fff;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #21242771;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+  }
+
 .title{
     font-family: Verdana, Arial, Helvetica, sans-serif;
     margin: 0px 0px -13px 0px;
@@ -217,7 +231,7 @@ body{
     top:0; left:0;
     width:100%; height:100%;
     opacity:1;
-    background-color:#F7F5F6;
+    background-color:#F7F7F9;
     /*background-image:url('https://38.media.tumblr.com/bec5933eea5043acf6a37bb1394384ab/tumblr_meyfxzwXUc1rgpyeqo1_400.gif');
     background-image:url('https://media.giphy.com/media/ugEWbEMH0gm2c/giphy.gif');*/
     background-image:url('../img/load.gif');
