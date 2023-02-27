@@ -186,20 +186,15 @@ body{
     font-weight: 500;
     font-size: 1rem;
     border: 1px solid #7f93c9;
-    -webkit-animation: fadeUp 1.5s forwards;
-    animation: fadeUp 1.5s forwards;
 }
 .get-pokemon input:focus{
     border-color: none;
     box-shadow: none;
-
 }
 .get-pokemon label{
     padding-left: 2rem;
     font-size: 1.1rem;
     color: #7f93c9;
-    -webkit-animation: fadeUp 2s forwards;
-    animation: fadeUp 2s forwards;
 }
 .form-control:focus {
     border-color: none; 

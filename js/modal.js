@@ -222,8 +222,6 @@ function openModal(pokemon){
   modalElement.show();
 }
 
-
-
 function characteristics(pokemon){
   var id = pokemon.url.split("/")[6];
   return new Promise((resolve, reject) =>{
