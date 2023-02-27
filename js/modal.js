@@ -1,6 +1,6 @@
 var statsDiv;
 var infoContainer;
-function createModall(pokemon){
+function createModal(pokemon){
   
   var modalId = `modal-${pokemon.name}`;
   var modal = document.createElement("div");
@@ -216,7 +216,7 @@ function createModall(pokemon){
 function openModal(pokemon){
   var modalId = `modal-${pokemon.name}`;
   var selection = document.getElementById("pokedex");
-  var modal = createModall(pokemon);
+  var modal = createModal(pokemon);
   selection.appendChild(modal);
   var modalElement = new bootstrap.Modal(document.getElementById(modalId));
   modalElement.show();
