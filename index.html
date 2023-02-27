@@ -9,6 +9,7 @@
     <link rel="icon" href="img/icon.png" type="image/x-icon">
     <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="fontawesome\css\all.min.css">
     <link rel="stylesheet" href="css/colors-types.css">
     <link rel="stylesheet" href="css/style.css">
@@ -16,17 +17,17 @@
 </head>
 <body>
     <header class="custom-header d-flex flex-wrap justify-content-center py-3 mb-4">
-        <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none align-header">
+        <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none align-header" data-aos="zoom-out-right" data-aos-duration="1500">
             <img src="img\PokeLogo.png" class="img-fluid img-adjust" width="180px" height="180px">
         </a>
         <a href="#main-page" class="link-adjust">
-            <button class="btn ancor-adjust">Clique aqui para ir à Pokédex</button>
+            <button data-aos="zoom-out-right" class="btn ancor-adjust" data-aos="zoom-out-right" data-aos-duration="1500">Clique aqui para ir à Pokédex</button>
         </a>
     </header>
     <main>
         <div id="main-page" class="form-floating get-pokemon">
-            <input type="text" class="form-control" id="floatingInput" placeholder=" ">
-            <label for="floatingInput">Search name</label>
+            <input type="text" class="form-control" id="floatingInput" placeholder=" " data-aos="zoom-in" data-aos-duration="1000">
+            <label for="floatingInput" data-aos="zoom-in" data-aos-duration="1500">Search name</label>
         </div>
         <section id="pokedex" class="container custom-row">
             <!-- Conteúdo criado e adicionado via JavaScript -->
@@ -43,6 +44,10 @@
     <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/async/3.2.4/async.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="js/main.js"></script>
     <script src="js/modal.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
