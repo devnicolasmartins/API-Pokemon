@@ -153,7 +153,7 @@ async function searchPokemon() {
   }
   await getAllPokemon(limit);
   var pokeFilter = allPokemon.filter(pokemon => {
-    return pokemon.name.toLowerCase().includes(inputValue.toLowerCase());
+    return pokemon.name.toLowerCase().includes(inputValue.toLowerCase().trim());
   })
   var selection = document.getElementById("pokedex");
   selection.innerHTML = "";
