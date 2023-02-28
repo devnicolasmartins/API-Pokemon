@@ -3,7 +3,7 @@
 ![image](https://user-images.githubusercontent.com/93746855/221718110-ab52e722-2fb0-4d36-9500-1b32e24c8d1d.png)
 
 
-> A ideia desse projeto foi criar uma pokédex com mais de 1000 pokémons, onde foi realizado o tratamento dos dados retornados pela API, adicionando as informações de forma clara e bem estilizada. O projeto conta com duas partes principais: A página inicial, onde todos pokémons são exibidos com suas informações básicas, sendo possível visualizar mais pokémons ao clicar no botão; E a janela modal aberta ao clicar em um pokémon, onde são exibidas informações mais detalhadas do pokémon alvo.
+> A ideia desse projeto foi criar uma pokédex com mais de 1000 pokémons, onde foi realizado o tratamento dos dados retornados pela API, adicionando as informações de forma clara e bem estilizada. O projeto conta com duas partes principais: A página inicial, onde todos os pokémons são exibidos com suas informações básicas, sendo possível visualizar mais pokémons ao clicar no botão; E a janela modal aberta ao clicar em um pokémon, onde são exibidas informações mais detalhadas do pokémon alvo.
 
 # Responsividade :smile:
 
@@ -12,7 +12,7 @@
 
 # Cuidados Gerais :monocle_face:
 
-- Enquanto a aplicação realiza a busca para filtrar os pokémons de acordo com o texto digitado, foi criada uma animação de carregamento, finalizada quando a página finaliza a busca
+- Enquanto a aplicação realiza a busca para filtrar os pokémons de acordo com o texto digitado, foi criada uma animação de carregamento, finalizada quando a página finaliza a busca.
 
 ![image](https://user-images.githubusercontent.com/93746855/221720319-f3e742ec-6389-40fc-a498-f9d1f6499b94.png)
 
