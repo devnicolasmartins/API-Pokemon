@@ -23,7 +23,7 @@
 # Adicionais :sunglasses:	
 
 - O projeto conta com uma animação de pré carregamento, exibindo um GIF até que a página seja carregada completamente.
-- Os cards dos pokémons, bem como a logo e o botão "Clique para ir à Pokedéx" possuem animação.
+- Os cards dos pokémons, bem como a logo e o botão "Clique para ir à Pokédex" possuem animação.
 
 # Você pode acessar o projeto clicando <a href="https://project-pokeapi.vercel.app/"> aqui </a>
 
