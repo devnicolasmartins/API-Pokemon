@@ -1,6 +1,9 @@
 # Pokédex
 
+![image](https://user-images.githubusercontent.com/93746855/221725514-1018d7fc-d668-454b-821f-1822529ebe45.png)
+
 ![image](https://user-images.githubusercontent.com/93746855/221718110-ab52e722-2fb0-4d36-9500-1b32e24c8d1d.png)
+
 
 
 > A ideia desse projeto foi criar uma pokédex com mais de 1000 pokémons, onde foi realizado o tratamento dos dados retornados pela API, adicionando as informações de forma clara e bem estilizada. O projeto conta com duas partes principais: A página inicial, onde todos os pokémons são exibidos com suas informações básicas, sendo possível visualizar mais pokémons ao clicar no botão; E a janela modal aberta ao clicar em um pokémon, onde são exibidas informações mais detalhadas do pokémon alvo.
