@@ -10,7 +10,9 @@
 
 # Responsividade :smile:
 
-![image](https://user-images.githubusercontent.com/93746855/221719109-b51aa4a9-5c80-4dba-b47c-f5eea4847849.png)
+![image](https://user-images.githubusercontent.com/93746855/221725731-f33dd796-0e3d-4b20-a6a7-2329eb800e8d.png)
+![image](https://user-images.githubusercontent.com/93746855/221725833-68b1b4ec-7aac-42cc-a8e6-c29387d11d88.png)
+
 > O projeto é totalmente responsivo, todos os componentes se adaptam perfeitamente a todos os tamanhos de tela.
 
 # Cuidados Gerais :monocle_face:
